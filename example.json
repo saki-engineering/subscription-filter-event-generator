@@ -1,0 +1,22 @@
+[
+	{
+		"id": "eventId1",
+		"timestamp": 1440442987000,
+		"message": "[ERROR] First test message"
+	},
+	{
+		"id": "eventId2",
+		"timestamp": 1440442987001,
+		"message": "[ERROR] Second test message"
+	},
+	{
+		"id": "eventId3",
+		"timestamp": 1440442987002,
+		"message": "[ERROR] Third test message"
+	},
+	{
+		"id": "eventId4",
+		"timestamp": 1440442987003,
+		"message": "[ERROR] 4th test message"
+	}
+]
