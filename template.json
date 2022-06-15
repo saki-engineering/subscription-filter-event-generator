@@ -1,0 +1,18 @@
+{
+	"messageType": "DATA_MESSAGE",
+	"owner": "{{ .Owner }}",
+	"logGroup": "{{ .LogGroup }}",
+	"logStream": "{{ .LogStream }}",
+	"subscriptionFilters": [
+		"{{ .SubscriptionFilter }}"
+	],
+	"logEvents": [
+		{{ $n := .LastItemIndex }}{{ range $i, $v := .LogEvents }}{
+			"id": "{{ $v.ID }}",
+			"timestamp": {{ $v.Timestamp }},
+			"message": "{{ $v.Message }}"
+		}{{ if ne $i $n }},{{ end }}
+		{{ end }}
+	]
+}
+  
