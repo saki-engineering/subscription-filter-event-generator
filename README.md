@@ -1,6 +1,7 @@
 # subscription-filter-event-generator
+`subscription-filter-event-generator`は、json形式のログがサブスクリプションフィルタ経由でLambda関数に渡されるときのイベントデータを生成するコマンドです。
 
-**EXAMPLES**
+## Examples
 ```bash
 $ subscription-filter-event-generator  \
 	--owner=000000000000 \
@@ -29,6 +30,15 @@ $ subscription-filter-event-generator  \
 		"data": "H4sIAAAAAAAC/3SOT0vDQBDFv0p45z1sSkCdW8C0eBAh6a0Eic1YF7t/2JkqofS7S1sCKjqnefNjfrwjPIsMO15PiUG4r9f182PTdfWqgUH8DJxBsN8GBvu4W+V4SCC8yfDurqdOMw8eBD/JdTWQw4tss0vqYli6vXIW0AZ+er0E9JfP5oODnsERbgSBz/lhLGGgzrPo4BOorCpbVYu72xtrrZmLg7Bp2vap7Yuly6KFsmgxw5P5qVz8ryz/Una8jWH85exPXwEAAP//rEsFZzcBAAA="
 	}
 }
+```
+
+## Install
+[リリースページ](https://github.com/saki-engineering/subscription-filter-event-generator/releases)から所定のバイナリをダウンロードしてください。
+```bash
+// example
+$ curl -L -o subscription-filter-event-generator https://github.com/saki-engineering/subscription-filter-event-generator/releases/download/v0.0.1/subscription-filter-event-generator-darwin-amd64
+$ mv subscription-filter-event-generator ~/.local/bin
+$ chmod +x ~/.local/bin/subscription-filter-event-generator
 ```
 
 ## Available Flags
