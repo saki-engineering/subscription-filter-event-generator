@@ -1,0 +1,26 @@
+env:
+  - GO111MODULE=on
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - main: .
+    binary: subscription-filter-event-generator
+    env:
+      - CGO_ENABLED=0
+    goos:
+    - linux
+    - darwin
+    goarch:
+    - amd64
+    - arm64
+
+checksum:
+  name_template: "checksums.txt"
+  algorithm: sha256
+
+archives:
+  - format: binary
+    name_template: "{{ .Binary }}-{{ .Os }}-{{ .Arch }}"
